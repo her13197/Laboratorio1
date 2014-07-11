@@ -6,15 +6,15 @@
 //Fecha: 28-10-2013
 //***************************************************************
 public class RadioZoe implements Radio {
-	private boolean estado,amFm;
-	private String[] estacionesFav;
+	private boolean estado,AmFm;
+	private String[] EstacionFav;
 	private double estacion;
 	//CONSTRUCTOR.
 	public RadioZoe() {
 		estado= true; 
-		amFm=true; 
+		AmFm=true; 
 		estacion=530;
-		estacionesFav = new String[12];
+		EstacionFav = new String[12];
 	}
 	public void encendidoApagado(){
 		if(estado==true){
@@ -25,21 +25,21 @@ public class RadioZoe implements Radio {
 		}
 	}
 	public void cambiarFrecuencia(){
-		if(amFm==true){
-			amFm=false;
+		if(AmFm==true){
+			AmFm=false;
 			estacion=87.9;
 		}
-		else if(amFm==false){
-			amFm=true;
+		else if(AmFm==false){
+			AmFm=true;
 			estacion=530;
 		}
 	}
 	public void guardarEstacion(double estacion,int boton){
-		estacionesFav[boton]=Double.toString(estacion);
+		EstacionFav[boton]=Double.toString(estacion);
 	}
 	public void cambiarEstacion(boolean direccion){
 		if(direccion==true){
-			if(amFm==true){
+			if(AmFm==true){
 				if(estacion<1610){
 					estacion=estacion+10;
 				}
@@ -47,7 +47,7 @@ public class RadioZoe implements Radio {
 					estacion=530;
 				}
 			}
-			else if(amFm==false){
+			else if(AmFm==false){
 				if(estacion<107.9){
 					estacion=estacion+0.2;
 				}
@@ -57,7 +57,7 @@ public class RadioZoe implements Radio {
 			}
 		}
 		else if(direccion==false){
-			if(amFm==true){
+			if(AmFm==true){
 				if(estacion>530){
 					estacion=estacion-10;
 				}
@@ -65,7 +65,7 @@ public class RadioZoe implements Radio {
 					estacion=1610;
 				}
 			}
-			else if(amFm==false){
+			else if(AmFm==false){
 				if(estacion>87.9){			
 					estacion=estacion-0.2;
 				}
@@ -76,7 +76,7 @@ public class RadioZoe implements Radio {
 		}
 	}
 	public String[] getEstacionesFav(){
-		return estacionesFav;
+		return EstacionFav;
 	}
 	
 	//sets y gets
@@ -93,16 +93,16 @@ public class RadioZoe implements Radio {
 		this.estado = estado;
 	}
 	/**
-	 * @return the amFm
+	 * @return the AmFm
 	 */
 	public boolean getAmFm() {
-		return amFm;
+		return AmFm;
 	}
 	/**
-	 * @param amFm the amFm to set
+	 * @param AmFm the AmFm to set
 	 */
 	public void setAmFm(boolean amFm) {
-		this.amFm = amFm;
+		this.AmFm = amFm;
 	}
 	
 	public double getEstacion() {
