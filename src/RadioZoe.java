@@ -6,112 +6,112 @@
 //Fecha: 28-10-2013
 //***************************************************************
 public class RadioZoe implements Radio {
-	private boolean Estado,AmFm;
-	private String[] EstacionFav;
-	private double Estacion;
+	private boolean estado,frecuencia;
+	private String[] estacionesFav;
+	private double estacion;
 	//CONSTRUCTOR.
 	public RadioZoe() {
-		Estado= true; 
-		AmFm=true; 
-		Estacion=530;
-		EstacionFav = new String[12];
+		estado= true; 
+		frecuencia=true; 
+		estacion=530;
+		estacionesFav = new String[12];
 	}
 	public void encendidoApagado(){
-		if(Estado==true){
-			Estado=false;
+		if(estado==true){
+			estado=false;
 		}
-		else if(Estado==false){
-			Estado=true; 
+		else if(estado==false){
+			estado=true; 
 		}
 	}
 	public void cambiarFrecuencia(){
-		if(AmFm==true){
-			AmFm=false;
-			Estacion=87.9;
+		if(frecuencia==false){
+			frecuencia=true;
+			estacion=87.9;
 		}
-		else if(AmFm==false){
-			AmFm=true;
-			Estacion=530;
+		else if(frecuencia==true){
+			frecuencia=false;
+			estacion=530;
 		}
 	}
 	public void guardarEstacion(double estacion,int boton){
-		EstacionFav[boton]=Double.toString(estacion);
+		estacionesFav[boton]=Double.toString(estacion);
 	}
 	public void cambiarEstacion(boolean direccion){
 		if(direccion==true){
-			if(AmFm==true){
-				if(Estacion<1610){
-					Estacion=Estacion+10;
+			if(frecuencia==false){
+				if(estacion<1610){
+					estacion=estacion+10;
 				}
 				else{
-					Estacion=530;
+					estacion=530;
 				}
 			}
-			else if(AmFm==false){
-				if(Estacion<107.9){
-					Estacion=Estacion+0.2;
+			else if(frecuencia==true){
+				if(estacion<107.9){
+					estacion=estacion+0.2;
 				}
 				else{
-					Estacion=87.9;
+					estacion=87.9;
 				}
 			}
 		}
 		else if(direccion==false){
-			if(AmFm==true){
-				if(Estacion>530){
-					Estacion=Estacion-10;
+			if(frecuencia==false){
+				if(estacion>530){
+					estacion=estacion-10;
 				}
 				else{
-					Estacion=1610;
+					estacion=1610;
 				}
 			}
-			else if(AmFm==false){
-				if(Estacion>87.9){			
-					Estacion=Estacion-0.2;
+			else if(frecuencia==true){
+				if(estacion>87.9){			
+					estacion=estacion-0.2;
 				}
 				else{
-					Estacion=107.9;
+					estacion=107.9;
 				}
 			}
 		}
 	}
 	public String[] getEstacionesFav(){
-		return EstacionFav;
+		return estacionesFav;
 	}
 	
 	//sets y gets
 	/**
-	 * @return the Estado
+	 * @return the estado
 	 */
 	public boolean getEstado() {
-		return Estado;
+		return estado;
 	}
 	/**
-	 * @param Estado the Estado to set
+	 * @param estado the estado to set
 	 */
 	public void setEstado(boolean estado) {
-		this.Estado = estado;
+		this.estado = estado;
 	}
 	/**
-	 * @return the AmFm
+	 * @return the frecuencia
 	 */
-	public boolean getAmFm() {
-		return AmFm;
+	public boolean getFrecuencia() {
+		return frecuencia;
 	}
 	/**
-	 * @param AmFm the AmFm to set
+	 * @param frecuencia the frecuencia to set
 	 */
-	public void setAmFm(boolean amFm) {
-		this.AmFm = amFm;
+	public void setFrecuencia(boolean frecuencia) {
+		this.frecuencia = frecuencia;
 	}
 	
 	public double getEstacion() {
-		return Estacion;
+		return estacion;
 	}
 	/**
-	 * @param Estacion the Estacion to set
+	 * @param estacion the estacion to set
 	 */
 	public void setEstacion(double estacion) {
-		this.Estacion = estacion;
+		this.estacion = estacion;
 	} 
 }

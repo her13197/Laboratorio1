@@ -11,4 +11,7 @@ public interface Radio {
 	public void guardarEstacion(double estacion,int boton);
 	public void cambiarEstacion(boolean direccion);
 	public String[] getEstacionesFav();
+	public boolean getFrecuencia();
+	public boolean getEstado();
+	public double getEstacion();	
 }

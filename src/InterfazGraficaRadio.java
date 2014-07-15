@@ -10,10 +10,10 @@ import java.awt.*;
 import java.awt.event.*;
 public class InterfazGraficaRadio extends javax.swing.JFrame {
     /** Creates new form InterfazGraficaRadio */
-	private RadioZoe miRadio;
+	private RadioZoe mi_Radio;
     public InterfazGraficaRadio() {
         initComponents();
-		miRadio=new RadioZoe();
+		mi_Radio= new RadioZoe();
     }
 
     /** This method is called from within the constructor to
@@ -274,8 +274,8 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 
     private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		miRadio.cambiarEstacion(false);
-		lblEstacion.setText(Double.toString(miRadio.getEstacion()));
+		mi_Radio.cambiarEstacion(false);
+		lblEstacion.setText(Double.toString(mi_Radio.getEstacion()));
 		btnFav12.setBackground(Color.red);
 			btnFav1.setBackground(Color.red);
 			btnFav3.setBackground(Color.red);
@@ -292,8 +292,8 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		miRadio.cambiarEstacion(true);
-		lblEstacion.setText(Double.toString(miRadio.getEstacion()));
+		mi_Radio.cambiarEstacion(true);
+		lblEstacion.setText(Double.toString(mi_Radio.getEstacion()));
 		btnFav12.setBackground(Color.red);
 			btnFav1.setBackground(Color.red);
 			btnFav3.setBackground(Color.red);
@@ -310,8 +310,8 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 
     private void btnFav1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[1]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),1);
+		if(mi_Radio.getEstacionesFav()[1]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),1);
 		}
 		btnFav1.setBackground(Color.green);
 			btnFav2.setBackground(Color.red);
@@ -325,13 +325,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[1]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[1]);
         // TODO add your handling code here:
     }
 	private void btnFav2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[2]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),2);
+		if(mi_Radio.getEstacionesFav()[2]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),2);
 		}
 			btnFav2.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -345,14 +345,14 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[2]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[2]);
         // TODO add your handling code here:
     }
 
     private void btnFav3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[3]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),3);
+		if(mi_Radio.getEstacionesFav()[3]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),3);
 		}
 			btnFav3.setBackground(Color.green);
 			btnFav2.setBackground(Color.red);
@@ -366,13 +366,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[3]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[3]);
     }
 
     private void btnFav4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[4]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),4);
+		if(mi_Radio.getEstacionesFav()[4]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),4);
 		}
 			btnFav4.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -386,13 +386,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[4]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[4]);
     }
 
     private void btnFav5ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[5]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),5);
+		if(mi_Radio.getEstacionesFav()[5]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),5);
 		}
 			btnFav5.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -406,13 +406,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[5]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[5]);
     }
 
     private void btnFav6ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[6]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),6);
+		if(mi_Radio.getEstacionesFav()[6]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),6);
 		}
 			btnFav6.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -426,13 +426,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[6]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[6]);
     }
 
     private void btnFav7ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[7]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),7);
+		if(mi_Radio.getEstacionesFav()[7]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),7);
 		}
 			btnFav7.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -446,13 +446,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[7]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[7]);
     }
 
     private void btnFav8ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[8]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),8);
+		if(mi_Radio.getEstacionesFav()[8]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),8);
 		}
 			btnFav8.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -466,13 +466,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[8]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[8]);
     }
 
     private void btnFav9ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[9]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),9);
+		if(mi_Radio.getEstacionesFav()[9]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),9);
 		}
 			btnFav9.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -486,13 +486,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[9]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[9]);
     }
 
     private void btnFav10ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[10]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),10);
+		if(mi_Radio.getEstacionesFav()[10]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),10);
 		}
 			btnFav10.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -506,13 +506,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav9.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[10]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[10]);
     }
 
     private void btnFav11ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[11]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),11);
+		if(mi_Radio.getEstacionesFav()[11]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),11);
 		}
 			btnFav11.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -526,13 +526,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav9.setBackground(Color.red);
 			btnFav12.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[11]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[11]);
     }
 
     private void btnFav12ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		if(miRadio.getEstacionesFav()[12]==null){
-			miRadio.guardarEstacion(miRadio.getEstacion(),12);
+		if(mi_Radio.getEstacionesFav()[12]==null){
+			mi_Radio.guardarEstacion(mi_Radio.getEstacion(),12);
 		}
 			btnFav12.setBackground(Color.green);
 			btnFav1.setBackground(Color.red);
@@ -546,13 +546,13 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 			btnFav10.setBackground(Color.red);
 			btnFav11.setBackground(Color.red);
 			btnFav9.setBackground(Color.red);
-		lblEstacion.setText(miRadio.getEstacionesFav()[12]);
+		lblEstacion.setText(mi_Radio.getEstacionesFav()[12]);
     }
 
     private void btnEstadoActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		miRadio.encendidoApagado();
-		if(miRadio.getEstado()==true){
+		mi_Radio.encendidoApagado();
+		if(mi_Radio.getEstado()==true){
 			btnFav1.setEnabled(true);
 			btnFav2.setEnabled(true);
 			btnFav3.setEnabled(true);
@@ -592,8 +592,8 @@ public class InterfazGraficaRadio extends javax.swing.JFrame {
 
     private void btnFrecuenciaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-		miRadio.cambiarFrecuencia();
-		if(miRadio.getAmFm()==true){
+		mi_Radio.cambiarFrecuencia();
+		if(mi_Radio.getFrecuencia()==false){
 			btnFrecuencia.setBackground(Color.yellow);
 			btnFrecuencia.setText("AM");
 		}

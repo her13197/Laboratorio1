@@ -128,28 +128,28 @@ public class RadioZoeTest {
     }
 
     /**
-     * Test of getAmFm method, of class RadioZoe.
+     * Test of getFrecuencia method, of class RadioZoe.
      */
     @Test
-    public void testGetAmFm() {
-        System.out.println("getAmFm");
+    public void testGetFrecuencia() {
+        System.out.println("getFrecuencia");
         RadioZoe instance = new RadioZoe();
         boolean expResult = false;
-        boolean result = instance.getAmFm();
+        boolean result = instance.getFrecuencia();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setAmFm method, of class RadioZoe.
+     * Test of setFrecuencia method, of class RadioZoe.
      */
     @Test
-    public void testSetAmFm() {
-        System.out.println("setAmFm");
-        boolean amFm = false;
+    public void testSetFrecuencia() {
+        System.out.println("setFrecuencia");
+        boolean frecuencia = false;
         RadioZoe instance = new RadioZoe();
-        instance.setAmFm(amFm);
+        instance.setFrecuencia(frecuencia);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
